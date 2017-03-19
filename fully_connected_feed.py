@@ -220,7 +220,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--learning_rate',
       type=float,
-      default=0.01,
+      default=0.75,
       help='Initial learning rate.'
   )
   parser.add_argument(
@@ -232,19 +232,26 @@ if __name__ == '__main__':
   parser.add_argument(
       '--hidden1',
       type=int,
-      default=128,
+      default=1024,
       help='Number of units in hidden layer 1.'
   )
   parser.add_argument(
       '--hidden2',
       type=int,
-      default=32,
+      default=256,
       help='Number of units in hidden layer 2.'
   )
   parser.add_argument(
+      '--hidden3',
+      type=int,
+      default=64,
+      help='Number of units in hidden layer 3.'
+  )
+
+  parser.add_argument(
       '--batch_size',
       type=int,
-      default=100,
+      default=200,
       help='Batch size.  Must divide evenly into the dataset sizes.'
   )
   parser.add_argument(

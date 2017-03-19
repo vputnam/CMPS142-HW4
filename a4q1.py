@@ -27,7 +27,7 @@ def p1():
 def p2(z):
     x = tf.Variable([3., -4.])
     y = tf.placeholder(tf.float32,shape= (1,2)) #x.get_shape())
-    result = tf.cond(tf.greater(z,0), lambda: tf.add(x,y), lambda: tf.sub(x,y))
+    result = tf.cond(tf.greater(z,0), lambda: tf.add(x,y), lambda: tf.subtract(x,y))
     obj = [x,y,result]
     return obj
 
